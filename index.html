@@ -1,67 +1,100 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Stone Garden</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body class="bg-stone-50">
-        <!-- Section 1: Floating Stones -->
-        <section class="relative h-screen overflow-hidden">
-            <!-- TODO: Create 5-7 "stones" using div elements
-         - Use absolute positioning
-         - Vary sizes with w-[] and h-[]
-         - Make them circular with rounded-full
-         - Position them asymmetrically
-         - Add subtle shadows
-         - Consider different shades of gray -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Garden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-stone-100">
+    <!-- Section 1: Floating Stones with Ripples -->
+    <section class="md:relative md:h-screen overflow-hidden">
+      <!-- Background Elements (Desktop Only) -->
+      <!-- TODO: Create the curved background using shapes
+         HINTS:
+         - Use md:absolute for desktop positioning
+         - Top-left shape: dark rectangle (stone-300)
+         - Bottom-right shape: darker rectangle (stone-700)
+         - Large light circle in bottom-right
+         - Use -z-10 or -z-20 for layering behind content
+         - Mobile: These become simple horizontal bars -->
 
-            <!-- TODO: Add a centered quote in the middle of the stones
-         - Use z-index to layer appropriately
-         - Keep text minimal and elegant -->
-        </section>
+      <!-- Example for top-left background -->
+      <header class="w-100 md:w-[50vw] h-[5vh] md:h-[50vh] bg-stone-300 md:absolute left-0 top-0 -z-20">
+        <!-- This creates the darker section. To make it curved, the large lighter circle sits on top of it to make it look curved. -->
+      </header>
 
-        <!-- Section 2: Wisdom Stones -->
-        <section class="min-h-screen p-8 md:p-16">
-            <h2 class="text-3xl text-center mb-16 text-stone-700">
-                Three Principles
-            </h2>
+      <!-- TODO: Add bottom-right dark shape -->
+      <!-- TODO: Add large light circle overlay -->
 
-            <!-- TODO: Create 3 "wisdom stone" cards
-         - Each should have rounded corners or be circular
-         - Arrange them asymmetrically (not in a standard row)
-         - Use transform utilities for slight rotations
-         - Include a title and short principle text
-         - Experiment with negative margins for overlap -->
-        </section>
+      <!-- Vertical Text: "zen" -->
+      <!-- TODO: Position in top-right corner
+         HINTS:
+         - Use flex-col for vertical stacking
+         - Consider text color (blue-500 works well)
+         - Use md:absolute for desktop positioning
+         - Add proper spacing with margin -->
+      <div class="m-4 md:m-0 md:absolute right-[1vw] top-[1vh]">
+        <!-- Add "z", "e", "n" as separate spans -->
+      </div>
 
-        <!-- Section 3: Rake Patterns -->
-        <section class="h-96 relative">
-            <!-- TODO: Create horizontal "rake lines"
-         - Use border utilities creatively
-         - Add several parallel lines with spacing
-         - Consider using gradient backgrounds
-         - Make it responsive (fewer lines on mobile) -->
+      <!-- Stone 1: Stillness (smallest) -->
+      <!-- TODO: Create ripple effect with nested divs
+         STRUCTURE:
+         - Outer container: position it with md:absolute
+         - 8 nested divs for ripples, each with:
+           * border-2 border-stone-400
+           * bg-stone-100/20 (20% opacity)
+           * p-1 md:p-3 for spacing
+           * rounded-full
+         - Center stone div with actual content:
+           * Dark background (bg-stone-700)
+           * White text (text-stone-100)
+           * Size: md:w-[14rem] md:h-[14rem]
+           * Use grid place-items-center for centering
 
-            <!-- TODO: Add 2-3 stones that "interrupt" the rake pattern
-         - Position them to create visual interest
-         - The lines should appear to flow around them -->
-        </section>
+         MOBILE: Stack vertically, remove absolute positioning -->
 
-        <!-- Section 4: Stone Collection -->
-        <section class="p-8 md:p-16 bg-stone-100">
-            <h2 class="text-2xl text-center mb-12 text-stone-600">
-                Find Your Balance
-            </h2>
+      <div
+        class="z-10 border-2 border-stone-400 bg-stone-100/20 p-1 md:p-3 rounded-full md:absolute top-[2vh] left-[25vw]">
+        <!-- TODO: Add 7 more nested ripple divs here -->
+        <!-- Then add the center stone with "Stillness" content -->
+      </div>
 
-            <!-- TODO: Create a responsive grid of 9-12 small stones
-         - Use grid utilities
-         - Each stone should be unique (size/shade)
-         - On mobile: 3 columns
-         - On tablet: 4 columns
-         - On desktop: 6 columns
-         - Add hover effects (scale, shadow changes) -->
-        </section>
-    </body>
+      <!-- Stone 2: Balance (largest) -->
+      <!-- TODO: Similar structure to Stone 1, but:
+         - Position: top-[20vh] right-[25vw]
+         - Size: md:w-[24rem] md:h-[24rem]
+         - Larger text (text-6xl on desktop) -->
+
+      <!-- Stone 3: Presence (medium) -->
+      <!-- TODO: Similar structure, but:
+         - Position: bottom-[5vh] left-[20vw]
+         - Size: md:w-[16rem] md:h-[16rem] -->
+
+      <!-- Vertical Text: "garden" -->
+      <!-- TODO: Position in bottom-left corner
+         - Similar to "zen" but use green-500
+         - Add letters: g, a, r, d, e, n -->
+
+      <!-- HELPFUL CLASSES REFERENCE:
+         Positioning: relative, absolute, top-[], right-[], bottom-[], left-[]
+         Sizing: w-[], h-[], w-[50vw], h-[50vh]
+         Circles: rounded-full
+         Opacity: bg-stone-100/20 (20% opacity)
+         Z-index: z-10, -z-10, -z-20
+         Responsive: md: prefix for desktop-only styles
+         Flexbox: flex, flex-col, items-center
+         Grid: grid, place-items-center
+         Spacing: p-1, p-3, m-4
+         Text: text-5xl, text-6xl, text-sm -->
+    </section>
+
+    <!-- Content for stones:
+  Stone 1 - Stillness: "In quietude, clarity emerges"
+  Stone 2 - Balance: "Harmony found in asymmetry"
+  Stone 3 - Presence: "This moment, perfectly imperfect"
+
+  Note: Subtitles should be hidden on desktop (md:hidden) -->
+  </body>
 </html>
