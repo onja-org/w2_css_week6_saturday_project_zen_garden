@@ -4,8 +4,8 @@
 
 ## 🎨 What You're Building
 
-<img src="./assets/zen_garden_full.png" alt="zen garden sample" width="600">
-<img src="./assets/zen_garden_mobile.png" alt="zen garden sample" width="200">
+<img src="../assets/zen_garden_full.png" alt="zen garden sample" width="600">
+<img src="../assets/zen_garden_mobile.png" alt="zen garden sample" width="200">
 
 A meditative interface featuring stones with ripple effects, asymmetrical balanced layout, curved backgrounds, and responsive design that transforms gracefully between mobile and desktop.
 
