@@ -6,25 +6,12 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
+    "submit": "bash scripts/submit.sh",
     "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "@testing-library/jest-dom": "^6.1.0"
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"],
-    "testMatch": ["<rootDir>/tests/**/*.test.js"],
-    "collectCoverageFrom": [
-      "lab/**/*.html"
-    ],
-    "testEnvironmentOptions": {
-      "html": "<!DOCTYPE html><html><head></head><body></body></html>",
-      "url": "http://localhost",
-      "pretendToBeVisual": true,
-      "resources": "usable"
-    }
   }
 }
