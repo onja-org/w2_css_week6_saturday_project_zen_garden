@@ -13,20 +13,35 @@ This is a **Week 2 CSS** project from the Onja coding bootcamp, specifically the
 - **HTML5** - Semantic structure
 - **Tailwind CSS** - Utility-first styling via CDN
 - **Responsive Design** - Mobile-first approach
+- **Jest** - Testing framework with jsdom environment
+- **Git Integration** - Automated branching and submission workflow
 
 ## 📂 Project Structure
 
 ```
 zen_garden/
 ├── README.md           # Project overview (this file)
-├── lab/
-│   ├── README.md       # Detailed implementation guide
-│   ├── index.html      # Main project file (starter template)
-│   ├── solution.html   # Complete solution (use as last resort)
-│   ├── content.md      # Content and text for the stones
-│   └── assets/
-│       ├── zen_garden_full.png    # Desktop design reference
-│       └── zen_garden_mobile.png  # Mobile design reference
+├── package.json        # Dependencies and test scripts
+├── jest.config.js      # Jest testing configuration
+├── scripts/
+│   └── submit.sh       # Automated submission script
+├── tests/              # Comprehensive test suite (107 tests)
+│   ├── setup.js        # Test environment setup
+│   ├── structure.test.js      # HTML structure tests
+│   ├── content.test.js        # Content validation tests  
+│   ├── styling.test.js        # CSS styling tests
+│   ├── responsive.test.js     # Responsive design tests
+│   ├── accessibility.test.js  # Accessibility tests
+│   ├── generate-test-report.js # HTML report generator
+│   └── test-results.html      # Generated test results (after running tests)
+└── lab/
+    ├── README.md       # Detailed implementation guide
+    ├── index.html      # Main project file (starter template)
+    ├── solution.html   # Complete solution (use as last resort)
+    ├── content.md      # Content and text for the stones
+    └── assets/
+        ├── zen_garden_full.png    # Desktop design reference
+        └── zen_garden_mobile.png  # Mobile design reference
 ```
 
 ## 🎯 Design Features
@@ -49,7 +64,50 @@ zen_garden/
 4. **Edit `lab/index.html`** to implement the design
 5. **Use the design images** in `/lab/assets/` as reference
 6. **Check `lab/content.md`** for the text content
-7. **View `lab/solution.html`** only as a last resort
+7. **Run tests** regularly to check your progress (see Testing section below)
+8. **View `lab/solution.html`** only as a last resort
+
+## 🧪 Testing & Submission
+
+This project includes **107 comprehensive tests** covering:
+- ✅ **Structure**: HTML semantic elements and layout
+- ✅ **Responsive Design**: Mobile-first and desktop breakpoints  
+- ✅ **Content**: All stone titles and descriptions
+- ✅ **Styling**: Colors, positioning, and visual effects
+- ✅ **Accessibility**: ARIA labels and semantic markup
+
+### Running Tests
+
+```bash
+# Install dependencies (run once)
+npm install
+
+# Run all tests
+npm test
+
+# Run tests in watch mode (auto-rerun on changes)
+npm run test:watch
+
+# Generate test coverage report
+npm run test:coverage
+```
+
+### Final Submission
+
+When you're ready to submit your completed project:
+
+```bash
+npm run submit <your-github-username>
+```
+
+This will:
+1. Install dependencies and run all tests
+2. Generate a comprehensive test report
+3. Create a temporary branch with your results
+4. Commit and push your work with test metrics
+5. Return you to the main branch
+
+**📸 Important**: After completing the project, open `tests/test-results.html` in your browser and **take a screenshot** of the test results interface to add to your README as proof of completion!
 
 ## ⏰ Time Allocation
 - **Total time**: 3.5 hours
@@ -71,6 +129,8 @@ zen_garden/
 - ✅ Curved background elements properly layered
 - ✅ Vertical text positioned correctly
 - ✅ Matches the visual harmony of the reference design
+- ✅ **All 107 tests passing** (run `npm test` to verify)
+- ✅ **Test results screenshot** added to README upon completion
 
 ---
 

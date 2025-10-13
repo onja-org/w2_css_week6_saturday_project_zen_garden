@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "submit": "bash scripts/submit.sh",
+    "submit": "node tests/generate-test-report.js && bash scripts/submit.sh",
     "test:coverage": "jest --coverage"
   },
   "devDependencies": {
